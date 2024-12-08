@@ -1,5 +1,5 @@
-# Use the official Python 3.9 slim-buster image as the base
-FROM python:3.9-slim-buster
+# Use the official Python 3.10 slim-buster image as the base
+FROM python:3.10-slim-buster
 
 # Set the working directory inside the container
 WORKDIR /NLP
