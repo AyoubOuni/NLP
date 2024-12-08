@@ -395,5 +395,5 @@ if __name__ == "__main__":
     print("Starting Flask server...")
     # Get the port from the environment variable, default to 5000 if not set
     port = int(os.environ.get("PORT", 5000))  # Default to 5000 if PORT is not set
-    app.run(debug=True, host="0.0.0.0", port=port)
+    app.run(debug=True, host="0.0.0.0", port=5000)
     print("Flask server stopped.")
