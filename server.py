@@ -78,15 +78,10 @@ except Exception as e:
     dataset = None
     print(f"Error loading dataset: {e}")
 
-@app.route("/")
-def home():
-    """
-    Root endpoint to confirm the server is running.
-    """
-    print("Server is running and received a request on the root endpoint.")
-    return jsonify({"message": "Server is running."})
 
-
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
 
 
 
@@ -396,10 +391,9 @@ def check_items():
 
 
 
-
 if __name__ == "__main__":
     print("Starting Flask server...")
-    # Get the port from the environment variable, default to 5000 if not set (Render will provide PORT)
-    port = int(os.environ.get("PORT", 4000))  # Default to 5000 if PORT is not set
-    app.run(debug=True,port=port)
+    # Get the port from the environment variable, default to 5000 if not set
+    port = int(os.environ.get("PORT", 5000))  # Default to 5000 if PORT is not set
+    app.run(debug=True, host="0.0.0.0", port=port)
     print("Flask server stopped.")
